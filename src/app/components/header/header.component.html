@@ -1,5 +1,5 @@
 <header>
 	<h1>{{title}}</h1>
 	<!--btnClick custom event is defined inside of the button component as Output-->
-	<app-button color="{{ showAddTask ? 'red' : 'green'}}" text="{{ showAddTask ? 'Close' : 'Add' }}" (btnClick)="toggleAddTask()"></app-button>
+	<app-button *ngIf="hasRoute('/')" color="{{ showAddTask ? 'red' : 'green'}}" text="{{ showAddTask ? 'Close' : 'Add' }}" (btnClick)="toggleAddTask()"></app-button>
 </header>
